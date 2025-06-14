@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sangeetha | Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f0f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #2d2dff;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h2 {
+      color: #2d2dff;
+      border-bottom: 2px solid #2d2dff;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .project {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill {
+      background: #2d2dff;
+      color: white;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #222;
+      color: white;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin: 0.5rem 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .contact-form button {
+      background: #2d2dff;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background: #1d1dff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sangeetha</h1>
+    <p>Web Developer | Data Analyst | Cloud Enthusiast</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>
+      Hello! I'm Sangeetha, a passionate developer skilled in HTML, CSS, JavaScript, SQL, Python, R, and cloud technologies.
+      I love creating beautiful and functional websites and exploring data with smart analytics.
+    </p>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>A personal website built with HTML, CSS, and JavaScript to showcase my work.</p>
+    </div>
+    <div class="project">
+      <h3>Data Dashboard</h3>
+      <p>Interactive dashboard using Python, Pandas, and Tableau for data visualization.</p>
+    </div>
+    <div class="project">
+      <h3>Cloud Storage Automation</h3>
+      <p>Used shell scripting and AWS CLI to automate backup tasks on AWS S3.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Python</div>
+      <div class="skill">SQL</div>
+      <div class="skill">R</div>
+      <div class="skill">Bootstrap</div>
+      <div class="skill">AWS</div>
+      <div class="skill">Git</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact Me</h2>
+    <form class="contact-form" onsubmit="return sendMessage(event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="form-message" style="color:green; margin-top: 1rem;"></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Sangeetha | All Rights Reserved
+  </footer>
+
+  <script>
+    function sendMessage(event) {
+      event.preventDefault();
+      document.getElementById('form-message').textContent = 'Message sent successfully!';
+      // Reset form fields
+      document.querySelector('.contact-form').reset();
+      return false;
+    }
+  </script>
+
+</body>
+</html>
